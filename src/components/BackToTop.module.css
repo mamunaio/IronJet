@@ -1,0 +1,36 @@
+.btn {
+  position: fixed;
+  right: 30px;
+  bottom: 30px; /* Now at the bottom */
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 99999;
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  outline: none;
+}
+
+.btn:hover {
+  background: var(--accent);
+  color: #000;
+  border-color: var(--accent);
+  box-shadow: 0 0 40px rgba(var(--accent-rgb), 0.5);
+}
+
+@media (max-width: 768px) {
+  .btn {
+    right: 20px;
+    bottom: 100px;
+    width: 50px;
+    height: 50px;
+  }
+}
